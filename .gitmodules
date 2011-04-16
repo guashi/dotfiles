@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule ".vim/bundle/git-vim"]
+	path = .vim/bundle/git-vim
+	url = git://github.com/motemen/git-vim.git
+[submodule ".vim/bundle/bufexplorer"]
+	path = .vim/bundle/bufexplorer
+	url = git://github.com/markabe/bufexplorer.git

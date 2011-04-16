@@ -11,9 +11,10 @@ let mapleader="," " Mapleader
 " General {
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on  " Automatically change file types
+
 set history=1000  " Keep (a lot) more history
 set nobackup
-set foldmethod=indent  " Set Fold method as (indent,syntax,manual)
+set foldmethod=manual  " Set Fold method as (indent,syntax,manual)
 " }
 
 " Vim UI {

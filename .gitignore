@@ -7,7 +7,7 @@
 # vim related files
 !.vimrc
 #!.gvimrc
-!.vim/**/*
+!.vim/
 
 # git related files
 !.gitconfig

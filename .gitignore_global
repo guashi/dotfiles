@@ -28,7 +28,6 @@
 *.sqlite
 
 *.swp
-*~
 
 # OS generated files #
 ######################

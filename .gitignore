@@ -1,13 +1,16 @@
-# ignore all files 
-*
+# ignore all directories and files 
+*/
+/*
 
 # readme
-!README
+!/README
 
 # vim related files
 !.vimrc
 #!.gvimrc
-!.vim/
+!/.vim/
+!/.vim/**/
+!/.vim/**/*
 
 # git related files
 !.gitconfig

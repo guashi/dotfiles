@@ -5,12 +5,16 @@
 # readme
 !/README
 
+# bash related files
+!.bashrc
+
 # vim related files
 !.vimrc
 #!.gvimrc
 !/.vim/
 !/.vim/**/
 !/.vim/**/*
+/.vim/.netrwhist
 
 # git related files
 !.gitconfig

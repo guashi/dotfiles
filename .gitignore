@@ -21,3 +21,5 @@
 !.gitignore_global
 !.gitignore
 
+# ctags
+!.ctags

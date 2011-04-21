@@ -6,6 +6,7 @@
 set visualbell  "Disble bell
 set nocompatible "No vi compatibility
 let mapleader="," " Mapleader
+let g:mapleader="," " Mapleader
 " }
 
 " General {
@@ -29,7 +30,7 @@ if has("autocmd")  "Do this when compiled with support for autocommands.
 			\ exe "normal g`\"" |
 			\ endif
 
-		autocmd BufWritePost .vimrc source $MYVIMRC  " Auto load .vimrc file
+		"autocmd BufWritePost .vimrc source $MYVIMRC  " Auto load .vimrc file
 	augroup END
 
 else
@@ -50,7 +51,7 @@ if (&t_Co>2 || has("gui_running")) && !exists("syntax_on")
 	set hlsearch
 
   colorscheme ir_black
-  highlight NonText guibg=#060606
+  highlight NonText guibg=#080808
   highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 endif
@@ -79,7 +80,7 @@ set matchpairs+=<:>
 set autoread  " Auto read when file is changed
 set hidden    " Hide buffers, rather ehan close them
 set number    " Show line number
-set numberwidth=5  
+set numberwidth=3  
 
 	" GVim {
 	if has("gui_running")
@@ -93,7 +94,7 @@ set numberwidth=5
 		" }
 
 		" Window  {
-		set lines=42
+		set lines=32
 		set columns=92
 		winpos 200 0
 		" }
@@ -114,6 +115,10 @@ set numberwidth=5
   set expandtab
   "set backspace=4 " Backspace back 2 spaces
   set backspace=indent,eol,start " Allow backspacing over everything in insert mode 
+  set wrap   " soft wrap
+  set textwidth=80
+  set colorcolumn=-1 " show the vertical line to wrap the line
+  highlight ColorColumn ctermbg=green guibg=orange
 
  if has("folding")
 	  set foldenable
@@ -170,7 +175,9 @@ set numberwidth=5
 	" }
 
 	" BufExplorer {
-	nmap <silent><F8> :BufExplorer<CR>
+	"nmap <silent><F8> :BufExplorer<CR>
+  let g:bufExplorerShowRelativePath=1
+  map <leader>o :BufExplorer<CR>
 	" }
 
 	" SuperTab {
@@ -181,6 +188,32 @@ set numberwidth=5
 	"let g:user_zen_expandabbr_key = "<c-e>"
 	"let g:user_zen_complete_tag=1
 	" }
+
+  " Omni Completion 
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+  autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  " }
+
+  " Ctags {
+  " Add current directory's generated tags file to available tags
+  set tags +=./tags
+  map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+  
+  " }
+  
+  " Taglist {
+  let Tlist_Ctags_Cmd='/usr/bin/ctags'
+  let Tlist_Show_One_File=1
+  let Tlist_Exit_OnlyWindow=1
+  let Tlist_Use_Right_Window=1
+  let Tlist_WinWidth='auto'
+  nmap <silent><F8> :TlistToggle<CR>
+
+  let g:tlist_javascript_settings='javascript;s:string;a:array;o:object;f:function'
+  " }
 " }
 " }
 

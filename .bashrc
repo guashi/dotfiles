@@ -33,6 +33,7 @@ else
 	export TERM='xterm-color'
 fi
 
+PATH=$PATH:$HOME/local/node/bin:
 # History ----------------
 # don't put duplicate lines in the history. 
 export HISTCONTROL=ignoredups
@@ -175,3 +176,4 @@ extract()
 	fi
 }
 
+PATH=$PATH:$HOME/local/node/bin:$HOME/local/doctorjs/bin:

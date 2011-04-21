@@ -13,3 +13,6 @@ git submodule add git://github.com/motemen/git-vim.git .vim/bundle/git-vim
 git submodule add git://github.com/tpope/vim-haml.git .vim/bundle/vim-haml
 #git submodule add git://github.com/tpope/vim-rails.git .vim/bundle/vim-rails
 git submodule add git://github.com/skammer/vim-css-color.git .vim/bundle/vim-css-color
+
+git submodule add git://github.com/RobinShi2010/vim-taglist.git
+.vim/bundle/vim-taglist

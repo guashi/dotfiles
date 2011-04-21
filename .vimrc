@@ -116,8 +116,8 @@ set numberwidth=3
   "set backspace=4 " Backspace back 2 spaces
   set backspace=indent,eol,start " Allow backspacing over everything in insert mode 
   set wrap   " soft wrap
-  set textwidth=80
-  set colorcolumn=-1 " show the vertical line to wrap the line
+  "set textwidth=80
+  set colorcolumn=79 " show the vertical line to wrap the line
   highlight ColorColumn ctermbg=green guibg=orange
 
  if has("folding")
@@ -212,7 +212,8 @@ set numberwidth=3
   "let Tlist_WinWidth='auto'
   nmap <silent><F8> :TlistToggle<CR>
 
-  let g:tlist_javascript_settings='javascript;s:string;a:array;o:object;f:function'
+  "let g:tlist_javascript_settings='javascript;s:string;a:array;o:object;f:function;c:closure'
+  let g:tlist_javascript_settings='javascript;o:object;f:function;a:array;c:closure'
   " }
 " }
 " }
